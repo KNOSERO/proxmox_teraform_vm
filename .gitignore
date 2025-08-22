@@ -1,0 +1,6 @@
+!.gitignore
+!LICENSE
+!main.tf
+!README.md
+!variables.tf
+*
