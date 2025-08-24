@@ -17,6 +17,7 @@ You create a file named `variables.tfvars`
 containers = [
   {
     name         = "<<NAME CONTAINER>>"
+    type         = "master"
     target_node  = "<<NAME NODE>>"
     vmid         = 201
     cores        = 2
@@ -27,6 +28,7 @@ containers = [
   },
   {
     name         = "<<NAME CONTAINER>>"
+    type         = "worker"
     target_node  = "<<NAME NODE>>"
     vmid         = 202
     cores        = 2
