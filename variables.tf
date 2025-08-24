@@ -15,6 +15,7 @@ variable "pm_password" {
 variable "containers" {
   type = list(object({
     name         = string
+    type         = string
     target_node  = string
     vmid         = number
     cores        = number
