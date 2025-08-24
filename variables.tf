@@ -40,5 +40,5 @@ variable "ci_password_hashed" {
 
 variable "path_ssh_key" {
   type = string
-  default = "root/.ssh/id_home_lab.pub"
+  default = "/root/.ssh/id_home_lab.pub"
 }
