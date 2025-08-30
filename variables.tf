@@ -14,15 +14,15 @@ variable "pm_password" {
 
 variable "containers" {
   type = list(object({
-    name         = string
-    type         = string
-    target_node  = string
-    vmid         = number
-    cores        = number
-    memory       = number
-    balloon      = number
-    ip_address   = string
-    mac          = string
+    name        = string
+    type        = string
+    target_node = string
+    vmid        = number
+    cores       = number
+    memory      = number
+    balloon     = number
+    ip_address  = string
+    mac         = string
   }))
 }
 
@@ -40,6 +40,6 @@ variable "ci_password_hashed" {
 }
 
 variable "path_ssh_key" {
-  type = string
+  type    = string
   default = "/root/.ssh/id_home_lab.pub"
 }

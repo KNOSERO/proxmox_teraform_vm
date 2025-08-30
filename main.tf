@@ -22,17 +22,17 @@ resource "proxmox_vm_qemu" "ubuntu_vm" {
   clone       = "template"
   full_clone  = true
 
-  cores       = each.value.cores
-  memory      = each.value.memory
-  balloon     = each.value.balloon
-  sockets     = 1
+  cores   = each.value.cores
+  memory  = each.value.memory
+  balloon = each.value.balloon
+  sockets = 1
 
-  bios        = "ovmf"
-  machine     = "virt"
-  boot        = "order=scsi0"
-  bootdisk    = "scsi0"
-  scsihw      = "virtio-scsi-pci"
-  agent       = 1
+  bios     = "ovmf"
+  machine  = "virt"
+  boot     = "order=scsi0"
+  bootdisk = "scsi0"
+  scsihw   = "virtio-scsi-pci"
+  agent    = 1
 
   serial {
     id   = 0
@@ -53,9 +53,9 @@ resource "proxmox_vm_qemu" "ubuntu_vm" {
   }
 
   network {
-    model  = "virtio"
-    bridge = "vmbr0"
-    id     = 0
+    model   = "virtio"
+    bridge  = "vmbr0"
+    id      = 0
     macaddr = each.value.mac
   }
 
