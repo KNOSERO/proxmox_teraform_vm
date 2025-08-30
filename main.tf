@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     proxmox = {
-      source = "telmate/proxmox"
+      source  = "telmate/proxmox"
       version = "3.0.1-rc6"
     }
   }
@@ -15,7 +15,7 @@ provider "proxmox" {
 }
 
 resource "proxmox_vm_qemu" "ubuntu_vm" {
-  for_each    = {for c in var.containers : c.name => c}
+  for_each    = { for c in var.containers : c.name => c }
   name        = each.value.name
   target_node = each.value.target_node
   vmid        = each.value.vmid
